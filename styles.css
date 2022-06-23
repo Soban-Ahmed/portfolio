@@ -52,20 +52,86 @@ nav .navbar .logo a{
   nav .navbar .cancel-btn, nav .menu-btn{
     color: #fff;
     position: absolute;
-    top: 0px; 
-    right: 0px; 
-    margin: 20px;
+    top: 20px; 
+    right: 30px; 
     font-size: 23px; 
+    display: none;
   }
   nav .menu-btn{
     color: #4070f4;
   }
+/* Home section */
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url("images/background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .home .home-content{
+    height: 100%;
+    width: 90%;
+    margin: auto; 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .home .home-content .text{
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .home .home-content .text1{
+    font-size: 25px; 
+  }
+  .home .home-content .text2{
+    font-size: 75px;
+    font-weight: 700; 
+    color: #0E2431;
+  }
+  .home .home-content .text3{
+    font-size: 40px;
+    color:  #4070f4;
+  }
+  .home .home-content .btn{
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 25px;
+    font-weight: 400;
+    background: #4070f4;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+  }
+  .home .home-content .btn:hover{
+    background: #fff;
+    color: #4070f4;
+    border: 2px solid #4070f4;
+    transition: all 0.5s ease;
+  }
+
+  .home .button{
+    margin: 14px 0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
   /* Media Responsive */
   @media (max-width: 700px){
     nav .navbar .menu{
         position: absolute;
         top: 0;
-        left: 0; 
+        left: -100%; 
         height: 100vh;
         flex-direction: column;
         max-width: 400px;
@@ -73,6 +139,10 @@ nav .navbar .logo a{
         background: #0E2431;
         text-align: center;
         padding-top: 20px; 
+        transition: all 0.5s ease;
+    }
+    nav .navbar.active .menu{
+        left: 0;
     }
     .navbar .menu li a{
         display:block;
@@ -83,4 +153,24 @@ nav .navbar .logo a{
     .navbar .media-icons{
         display: none;
     }
+     /* Side nav */
+    nav .navbar .cancel-btn, nav .menu-btn{
+        display: block;
+    }
+  }
+  @media (max-width: 683px){
+    .home .home-content .text2{
+        font-size: 55px;
+      }
+      .home .home-content .text3{
+        font-size: 30px;
+      }
+  }
+  @media (max-width: 501px){
+    .home .home-content .text2{
+        font-size: 35px;
+      }
+      .home .home-content .text3{
+        font-size: 20px;
+      }
   }
