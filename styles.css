@@ -48,9 +48,21 @@ nav .navbar .logo a{
     font-size: 18px;
     margin: 0 6px;
   }
+  /* Side nav */
+  nav .navbar .cancel-btn, nav .menu-btn{
+    color: #fff;
+    position: absolute;
+    top: 0px; 
+    right: 0px; 
+    margin: 20px;
+    font-size: 23px; 
+  }
+  nav .menu-btn{
+    color: #4070f4;
+  }
   /* Media Responsive */
   @media (max-width: 700px){
-    .navbar .menu{
+    nav .navbar .menu{
         position: absolute;
         top: 0;
         left: 0; 
@@ -62,7 +74,10 @@ nav .navbar .logo a{
         text-align: center;
         padding-top: 20px; 
     }
-    .navbar .menu a{
+    .navbar .menu li a{
+        display:block;
+        font-size: 23px;
+        margin:10px 0; 
         color: #fff;
     }
     .navbar .media-icons{
