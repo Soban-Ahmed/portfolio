@@ -15,9 +15,8 @@ closeBtn.onclick = function(){
     navbar.classList.remove("active"); 
 }
 
-window.onscroll = function(e){ // why window. here?
-    console.log(document.documentElement.scrollTop)
-    if(document.documentElement.scrollTop > 20){ // why document.?
+window.onscroll = function(e){ 
+    if(window.document.documentElement.scrollTop > 20){ // window and window.document is the same. Document is the main object (visible) the DOM
         nav.classList.add("sticky")
     }else{
         nav.classList.remove("sticky")

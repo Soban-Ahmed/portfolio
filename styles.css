@@ -15,10 +15,6 @@ nav{
     z-index: 998;
     transition: all 0.3s ease;
     font-family: 'Ubuntu', sans-serif;
-  }
-  nav.sticky{
-    background: #4070f4;
-    padding: 13px 0;
 }
 nav .navbar{
     display: flex;
@@ -27,15 +23,18 @@ nav .navbar{
     justify-content: space-between;
     align-items: center;
 }
-
 nav .navbar .logo a{
     font-weight: 500;
     font-size: 35px;
     color: #4070f4;
-  }
-  nav.sticky .navbar .logo a{
+}
+nav.sticky{
+    background: #4070f4;
+    padding: 13px 0;
+}
+nav.sticky .navbar .logo a{
     color: #fff;
-  }
+}
 .navbar .menu{
     display: flex;
     position: relative;
@@ -55,7 +54,6 @@ nav .navbar .logo a{
     color: #4070f4;
     transition: all 0.4s ease;
   }
-  
   nav.sticky .menu a{
     color: #fff;
     transition: all 0.4s ease;
@@ -63,7 +61,6 @@ nav .navbar .logo a{
   nav.sticky .menu a:hover{
     color: #0E2431;
   }
-  
   .navbar .media-icons a{
     color: #4070f4;
     font-size: 18px;
@@ -71,7 +68,10 @@ nav .navbar .logo a{
   }
   nav.sticky .media-icons a{
     color: #fff;
-   }
+  }
+  nav.sticky .menu-btn{
+    color: #fff;
+  }
   /* Side nav */
   nav .navbar .cancel-btn, nav .menu-btn{
     color: #fff;
@@ -84,9 +84,13 @@ nav .navbar .logo a{
   nav .menu-btn{
     color: #4070f4;
   }
+  
 /* Home section */
+section {
+    padding-top: 40px;
+}
 .home{
-    height: 100vh;
+    height: 100vh; /* This shows this section on full screen*/
     width: 100%;
     background: url("images/background.png") no-repeat;
     background-size: cover;
@@ -147,16 +151,16 @@ section .content{
     font-family: 'Poppins', sans-serif;
 }
 
-.content .title{
+section .title{
     display: flex; 
-    justify-content: center;
+    justify-content: center; /* horizontaly aligns when using flex*/
     margin-bottom: 40px; 
 }
 section .title span {
     color: #0E2431;
     font-size: 30px;
     font-weight: 600;
-    position: relative;
+    position: relative; /* positioning required for :before and :after*/
     padding-bottom: 8px;
 }
 
@@ -206,13 +210,62 @@ section .topic {
 .about .left img{
     height: 400px;
     width: 400px;;
-    object-fit: cover;
+    object-fit: cover; /* Crops image to fit the height and width rather than stretch or distort the image ratio*/
     border-radius: 12px;
 }
 
 
+/* Skills section */
 
-
+.skills {
+    background: #F0F8FF;
+}
+.skills .content{
+    padding: 40px 0;
+}
+.skills .skills-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .skills-details .text{
+    width: 50%;
+    text-align: justify;
+}
+.skills .skills-details .boxes{
+    display: flex;
+    width: 45%;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+}
+.skills .skills-details .boxes .box{
+   width: calc(100% / 2 - 20px);
+   margin: 20px 0;
+}
+.skills .experience{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.skills-details .experience .num {
+    color: #0E2431;
+    font-size: 80px;
+}
+.skills-details .experience .exp {
+    color: #0E2431;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+.skills-details .boxes .topic {
+    font-size: 20px;
+    color: #4070f4;
+}
+.skills-details .boxes .per {
+    font-size: 60px;
+    color: #4070f4;
+}
 
 
 
@@ -240,6 +293,15 @@ section .topic {
         margin: 40px 0;
     }
   }
+
+  @media (max-width: 750px){
+    .skills .skills-details{
+        flex-direction: column;
+    }
+    .skills .skills-details .text, .skills .skills-details .boxes{
+        width: 100%;
+    }
+  }
   @media (max-width: 700px){
     nav .navbar .menu{
         position: absolute;
@@ -255,10 +317,10 @@ section .topic {
         transition: all 0.5s ease;
     }
     nav .navbar.active .menu{
-        left: 0;
+        left: 0; /* Nav items on mobile view are hidden and hamburger shown instead */
     }
     .navbar .menu li a{
-        display:block;
+        display:block; /* gives each item clarence */
         font-size: 23px;
         margin:10px 0; 
         color: #fff;
@@ -286,4 +348,8 @@ section .topic {
       .home .home-content .text3{
         font-size: 20px;
       }
+      .skills-details .boxes .per {
+        font-size: 50px;
+        color: #4070f4;
+    }
   }
