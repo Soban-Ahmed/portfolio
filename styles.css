@@ -16,6 +16,10 @@ nav{
     transition: all 0.3s ease;
     font-family: 'Ubuntu', sans-serif;
   }
+  nav.sticky{
+    background: #4070f4;
+    padding: 13px 0;
+}
 nav .navbar{
     display: flex;
     width: 90%;
@@ -23,10 +27,14 @@ nav .navbar{
     justify-content: space-between;
     align-items: center;
 }
+
 nav .navbar .logo a{
     font-weight: 500;
     font-size: 35px;
     color: #4070f4;
+  }
+  nav.sticky .navbar .logo a{
+    color: #fff;
   }
 .navbar .menu{
     display: flex;
@@ -43,11 +51,27 @@ nav .navbar .logo a{
     padding: 6px 0;
     transition: all 0.4s ease;
   }
+  .navbar .menu a:hover{
+    color: #4070f4;
+    transition: all 0.4s ease;
+  }
+  
+  nav.sticky .menu a{
+    color: #fff;
+    tran
+  }
+  nav.sticky .menu a:hover{
+    color: #0E2431;
+  }
+  
   .navbar .media-icons a{
     color: #4070f4;
     font-size: 18px;
     margin: 0 6px;
   }
+  nav.sticky .media-icons a{
+    color: #fff;
+   }
   /* Side nav */
   nav .navbar .cancel-btn, nav .menu-btn{
     color: #fff;
@@ -93,7 +117,7 @@ nav .navbar .logo a{
     font-size: 40px;
     color:  #4070f4;
   }
-  .home .home-content .btn{
+  section .btn{
     outline: none;
     padding: 8px 16px;
     border-radius: 6px;
@@ -105,17 +129,86 @@ nav .navbar .logo a{
     border: 2px solid transparent;
     transition: all 0.4s ease;
   }
-  .home .home-content .btn:hover{
+  section .btn:hover{
     background: #fff;
     color: #4070f4;
     border: 2px solid #4070f4;
     transition: all 0.5s ease;
   }
-
-  .home .button{
+  section .button{
     margin: 14px 0;
   }
   
+/* About me section */
+
+section .content{
+    width: 80%;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content .title{
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 40px; 
+}
+section .title span {
+    color: #0E2431;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before {
+    content: '';
+    background: #4070f4;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+}
+section .title span::after {
+    content: '';
+    background: #4070f4;
+    position: absolute;
+    height: 3px;
+    width: 80%;
+    bottom: -10px;
+    left: 50%; /* why add this if youve added transform?*/
+    transform: translateX(-50%); /* what does this do?*/
+    
+}
+
+.about .about-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-detail .right p {
+    text-align: justify;
+    color: #0E2431;
+}
+
+.about .left{
+    width: 45%;
+}
+.about .right{
+    width: 55%;
+}
+section .topic {
+    color: #0E2431;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about .left img{
+    height: 400px;
+    width: 400px;;
+    object-fit: cover;
+    border-radius: 12px;
+}
 
 
 
@@ -127,6 +220,26 @@ nav .navbar .logo a{
 
 
   /* Media Responsive */
+  @media (max-width: 1190px){
+    section .content {
+        width: 90%;
+    }
+  }
+  @media (max-width: 1000px){
+    .about .about-detail {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .about-detail .left{ /*Add display flex + width to allow it to be centered using jsutify-content */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-detail .right {
+        width: 90%;
+        margin: 40px 0;
+    }
+  }
   @media (max-width: 700px){
     nav .navbar .menu{
         position: absolute;
