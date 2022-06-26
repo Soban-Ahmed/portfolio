@@ -13,7 +13,7 @@ nav{
     width: 100%;
     padding: 20px 0;
     z-index: 998;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
     font-family: 'Ubuntu', sans-serif;
 }
 nav .navbar{
@@ -93,9 +93,9 @@ section {
 .home{
     height: 100vh; /* This shows this section on full screen*/
     width: 100%;
-    background: url("images/background.png") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url("images/image3.jpeg") no-repeat;
+    background-size: contain;
+    background-position: right;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
   }
@@ -213,6 +213,7 @@ section .topic {
     width: 400px;;
     object-fit: cover; /* Crops image to fit the height and width rather than stretch or distort the image ratio*/
     border-radius: 12px;
+    object-position: 0px -132px;
 }
 
 
@@ -354,6 +355,9 @@ footer .text span a {
     box-shadow: rgba(0, 0, 0, 0.15);
     display: none;
   }
+  .mint-green {
+    color: #3bb99b;
+}
 
   /* Media Responsive */
   @media (max-width: 1190px){
