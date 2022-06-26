@@ -9,14 +9,13 @@ menuBtn.onclick = function(){
     menuBtn.style.opacity = "0";
     menuBtn.style.pointerEvents = "none"; 
     navbar.classList.add("active"); 
-    body.style.overflow = "hidden";
+    // body.style.overflow = "hidden"; You arent able to scroll the page after a menu has been clicked /observation mutation
 }
     
 closeBtn.onclick = function(){
     menuBtn.style.opacity = "1";
     menuBtn.style.pointerEvents = "auto"; 
     navbar.classList.remove("active"); 
-    body.style.overflow = "auto";
 }
 
 window.onscroll = function(e){ 
