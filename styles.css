@@ -252,11 +252,11 @@ section .topic {
     font-size: 80px;
 }
 .skills-details .experience .exp {
-    color: #0E2431;
-    margin-left: 20px;
+    color: #0E2431;    
     font-size: 18px;
     font-weight: 500;
     margin: 0 6px;
+    margin-left: 20px;
 }
 .skills-details .boxes .topic {
     font-size: 20px;
@@ -268,8 +268,44 @@ section .topic {
 }
 
 
-
-
+/* Projects section */
+.projects .boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.projects .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 12%);
+    cursor: default;
+    transition: all 0.4s ease;
+}
+.projects .boxes .icon{
+    border-radius: 50%;
+    background: #4070f4;
+    height: 50px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* This gets the icon in the center of the parent*/
+    margin: 0 auto 10px auto; /* Centers the icon horizontally*/
+}
+.projects .boxes .box:hover{
+    background: #4070f4;
+    transition: all 0.4s ease;
+}
+.projects .boxes .box:hover .icon{
+    color: #4070f4;
+    background: #fff;
+}
+.box:hover .topic, .box:hover p{
+    color: #fff;
+}
 
 
   /* Media Responsive */
@@ -292,8 +328,10 @@ section .topic {
         width: 90%;
         margin: 40px 0;
     }
+    .projects .boxes .box{
+        width: calc(100% / 2 - 20px);
+    }
   }
-
   @media (max-width: 750px){
     .skills .skills-details{
         flex-direction: column;
@@ -301,6 +339,9 @@ section .topic {
     .skills .skills-details .text, .skills .skills-details .boxes{
         width: 100%;
     }
+    .projects .boxes .box{
+        width: 100%;
+       }
   }
   @media (max-width: 700px){
     nav .navbar .menu{
