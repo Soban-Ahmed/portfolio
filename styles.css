@@ -106,6 +106,7 @@ section {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    background-size: 50%;
   }
   .home .home-content .text{
     font-family: 'Ubuntu', sans-serif;
