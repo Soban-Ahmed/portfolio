@@ -246,6 +246,10 @@ section .topic {
 .skills .skills-details .boxes .box{
    width: calc(100% / 2 - 20px);
    margin: 20px 0;
+   text-align: center;
+}
+.skills .skills-details .boxes .box i{
+    font-size: 80px;
 }
 .skills .experience{
     display: flex;
@@ -300,6 +304,13 @@ section .topic {
     line-height: 50px; /* This gets the icon in the center of the parent*/
     margin: 0 auto 10px auto; /* Centers the icon horizontally*/
 }
+.projects .boxes .icons-used{
+    font-size: 40px;
+    margin-top: 10px;
+}
+.projects .boxes .icons-used i{
+    margin: 0 10px;
+}
 .projects .boxes .box:hover{
     background: #4070f4;
     transition: all 0.4s ease;
@@ -308,7 +319,7 @@ section .topic {
     color: #4070f4;
     background: #fff;
 }
-.box:hover .topic, .box:hover p{
+.projects .box:hover .topic, .projects .box:hover p{
     color: #fff;
 }
 
@@ -358,6 +369,9 @@ footer .text span a {
   .mint-green {
     color: #3bb99b;
 }
+nav.sticky .mint-green {
+    color: #fff;
+}
 
   /* Media Responsive */
   @media (max-width: 1190px){
@@ -395,7 +409,7 @@ footer .text span a {
     }
     .projects .boxes .box{
         width: 100%;
-       }
+       }    
   }
   @media (max-width: 700px){
     nav .navbar .menu{
