@@ -93,7 +93,7 @@ section {
 .home{
     height: 100vh; /* This shows this section on full screen*/
     width: 100%;
-    background: url("images/image3.jpeg") no-repeat;
+    background: url("images/background3.png") no-repeat;
     background-size: contain;
     background-position: right;
     background-attachment: fixed;
@@ -106,7 +106,6 @@ section {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-size: 50%;
   }
   .home .home-content .text{
     font-family: 'Ubuntu', sans-serif;
@@ -411,6 +410,9 @@ nav.sticky .mint-green {
     .projects .boxes .box{
         width: 100%;
        }    
+       .home{
+        background: #F0F8FF;
+       }
   }
   @media (max-width: 700px){
     nav .navbar .menu{
