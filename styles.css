@@ -312,15 +312,15 @@ section .topic {
     margin: 0 10px;
 }
 .projects .boxes .box:hover{
-    background: #4070f4;
+    background: #F0F8FF;
     transition: all 0.4s ease;
 }
 .projects .boxes .box:hover .icon{
-    color: #4070f4;
-    background: #fff;
+    /* color: #4070f4; */
+    /* background: #fff; */
 }
 .projects .box:hover .topic, .projects .box:hover p{
-    color: #fff;
+    /* color: #fff; */
 }
 
 .contact{
@@ -372,7 +372,25 @@ footer .text span a {
 nav.sticky .mint-green {
     color: #fff;
 }
-
+/* Icon colors */
+.fa-html5{
+    color: #E34c26;
+}
+.fa-css3-alt{
+    color: #264de4;
+}
+.fa-js-square{
+    color: #f0db4f;
+}
+.fa-php{
+    color: #474a8a;
+}
+.fa-database{
+    color: #1ac1dd;
+}
+.fa-react{
+    color: #61dbfb;
+}
   /* Media Responsive */
   @media (max-width: 1190px){
     section .content {
