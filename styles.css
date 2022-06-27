@@ -431,6 +431,9 @@ nav.sticky .mint-green {
        .home{
         background: #F0F8FF;
        }
+       nav .navbar .logo a{
+        font-size: 25px;
+       }
   }
   @media (max-width: 700px){
     nav .navbar .menu{
@@ -475,6 +478,9 @@ nav.sticky .mint-green {
       }
       .contact .text{
         width: 100%;
+    }
+    .skills .experience{
+        justify-content: center;
     }
   }
   @media (max-width: 501px){
